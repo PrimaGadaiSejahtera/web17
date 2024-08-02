@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head> 
+  <body>
+    <div class="container">
+      <img src="pgs1.jpg" width="250" height="100" alt="PGS" style="display:block; margin:auto;"/>
+      <h1 class="form-title">FORMULIR VERIFIKASI NASABAH GADAI</h1></p>
+      <h3>Ketentuan :</h3>
+      √ Jawaban ditulis Tangan sendiri oleh Nasabah 
+      <p> √ Formulir ditanda tangan oleh nasabah sesuai kartu Identitas</p>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+      <label for="">1. kapan Barang jaminan tersebut di beli ?</label>
+      <input type="text" class="name">
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">2. Dimana Barang Jaminan Tersebut Di Beli</label>
+      <input type="text" class="email">
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">3. Berapa Harga Barang Jaminan Tersebut Di Beli ?</label>
+      <input type="text" class="country">
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">4. Apa Saja Spesifikasi Barang Jaminan Tersebut ?</label>
+      <input type="text" class="gender">
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">5. Siapa Pemilik Barang Jaminan tersebut?</label>
+      <input type="text" class="message">
+      <p>
+        <div class="form-submit-btn">
+          <input type="button"  value="Daftar" onclick="sendwhatsapp();">
+      </p>
+    </form>
+
+    <script>
+      function sendwhatsapp(){
+       var phonenumber = "+6281273844469";
+
+       var name = document.querySelector(".name").value;
+       var email = document.querySelector(".email").value;
+       var country = document.querySelector(".country").value;
+       var gender = document.querySelector(".gender").value;
+       var message = document.querySelector(".message").value;
+
+       var url = "https://wa.me/" + phonenumber + "?text="
+       +"*1. kapan Barang jaminan tersebut di beli ? :* "+name+"%0a"
+       +"*2. Dimana Barang Jaminan Tersebut Di Beli ? :* "+email+"%0a"
+       +"*3. Berapa Harga Barang Jaminan Tersebut Di Beli ?:* "+country+"%0a"
+       +"*4. Apa Saja Spesifikasi Barang Jaminan Tersebut ?:* "+gender+"%0a"
+       +"*5. Siapa Pemilik Barang Jaminan tersebut? :* "+message
+       +"%0a%0a"
+       +"FORMULIR VERIFIKASI NASABAH GADAI";
+
+       window.open(url, '_blank').focus();
+     } 
+    </script>
+  </body>
+</html>
